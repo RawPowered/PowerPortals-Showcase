@@ -75,7 +75,7 @@ Verified product screenshots and short demonstrations will be added here as rele
 
 ## Security
 
-Please do not post credentials, tokens, customer records, or private vulnerability details in public issues. A dedicated private security reporting method will be published before general availability. Until then, use this repository for public product and documentation feedback only.
+Please do not post credentials, tokens, customer records, or vulnerability details in public issues. Use the repository’s **Security** tab and choose **Report a vulnerability** to send a private security report. Use public issues for product and documentation feedback only.
 
 ## Repository scope
 
