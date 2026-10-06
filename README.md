@@ -65,6 +65,103 @@ The exact requirements, supported versions, and distribution instructions will b
 - **Security minded:** integrations should use scoped credentials, protect secrets, and be tested in a sandbox before production use.
 - **Transparent:** compatibility, module status, and setup requirements should be clear before installation.
 
+## Security architecture
+
+The diagram summarizes the main trust boundaries in the current validation build. WordPress authenticates the session; module controllers then apply the relevant capability and, where implemented, business-scope checks before accessing portal records or the connected CRM.
+
+```mermaid
+flowchart LR
+    U[User or administrator]
+    subgraph Site[Customer WordPress trust boundary]
+        WP[WordPress site<br/>TLS configured by host] --> AUTH[WordPress authentication and session]
+        AUTH --> ROUTE[Portal or admin request]
+        ROUTE --> CAP[Role and capability check]
+        CAP --> REQUEST{Request type}
+        REQUEST -->|Portal request| SCOPE[Module-specific status, membership, assignment, and record-scope checks]
+        REQUEST -->|Protected admin mutation| NONCE[Nonce check in protected form handlers]
+        NONCE --> SCOPE
+        SCOPE -->|Authorized| DATA[Portal controller and scoped data access]
+        CAP -->|Denied| BLOCK[Reject request]
+        NONCE -->|Invalid or missing| BLOCK
+        SCOPE -->|Denied or out of scope| BLOCK
+        DATA --> WDB[(WordPress site database)]
+        DATA --> OAUTH[Server-side CRM OAuth client]
+        MON[People and access health checks] -.-> CAP
+        MON -.-> SCOPE
+    end
+    U -->|HTTPS| WP
+    OAUTH -->|OAuth-backed API requests| CRM[Connected CRM<br/>Zoho is the initial target]
+    classDef actor fill:#eef6ff,stroke:#2f6fed,color:#10223f
+    classDef control fill:#fff4d6,stroke:#d99a00,color:#3f2f00
+    classDef store fill:#e8f7f4,stroke:#178f80,color:#0b3d3a
+    classDef denied fill:#fff0ee,stroke:#cb5146,color:#5b1813
+    class U,WP,AUTH,ROUTE,CRM actor
+    class CAP,REQUEST,NONCE,SCOPE control
+    class DATA,WDB,OAUTH,MON store
+    class BLOCK denied
+```
+
+The boundaries are module-specific: a capability check alone does not establish access to every record. Current field-portal checks include active membership and project assignment; sales and project workflows also use their connected identity and operational status. Host controls such as TLS, account MFA, database and backup protection, and credential protection at rest must be configured and verified for each deployment. This diagram is an architecture overview, not a security certification.
+
+## Identity and access management: roles, capabilities, and scope
+
+PowerPortals uses WordPress users and capabilities as the authorization foundation. Portal roles grant only the module-level access they need; the relevant workflow adds identity, status, organization, or project checks before it returns scoped information. The exact role and capability set depends on the enabled modules and release.
+
+```mermaid
+flowchart TB
+    ADMIN[Authorized site administrator] --> PROVISION[Provision or link WordPress account]
+    CRM[Connected CRM identity and status] -->|Sales and project users| PROVISION
+    FIELD[Field organization and membership records] -->|Field users| PROVISION
+    PROVISION --> WPUSER[WordPress user and authenticated session]
+    WPUSER --> MODULE{Requested module}
+    MODULE --> SALES[Sales portal]
+    MODULE --> PM[Project portal]
+    MODULE --> FIELDUSER[Field portal]
+    MODULE --> COMM[Commission administration<br/>separate additive entitlement]
+    MODULE --> SITEADMIN[Platform administration]
+    SALES --> SALESCAP[Required sales capability]
+    SALESCAP --> SALESIDENT[Linked CRM identity and active status]
+    SALESIDENT --> SALESRECORD[Sales record scope]
+    PM --> PMCAP[Required project capability]
+    PMCAP --> PMIDENT[Linked CRM identity and active status]
+    PMIDENT --> PMASSIGN[Assigned project scope]
+    FIELDUSER --> FIELDCAP[Field portal capability]
+    FIELDCAP --> MEMBERSHIP[Active field membership and organization]
+    MEMBERSHIP --> FIELDASSIGN[Permitted field role and project assignment]
+    COMM --> COMMCAP[Separate commission entitlement]
+    COMMCAP --> COMMSTATUS[Workflow status and permitted commission records]
+    SITEADMIN --> ADMINCAP[Required site or platform administration capability]
+    SALESRECORD -->|Checks pass| ALLOW[Allow only authorized action and records]
+    PMASSIGN -->|Checks pass| ALLOW
+    FIELDASSIGN -->|Checks pass| ALLOW
+    COMMSTATUS -->|Checks pass| ALLOW
+    ADMINCAP -->|Checks pass| ALLOW
+    SALESCAP -->|Missing capability| DENY[Deny]
+    SALESIDENT -->|Inactive or mismatched| DENY
+    PMCAP -->|Missing capability| DENY
+    PMIDENT -->|Inactive or mismatched| DENY
+    PMASSIGN -->|No matching assignment| DENY
+    FIELDCAP -->|Missing capability| DENY
+    MEMBERSHIP -->|Missing or inactive| DENY
+    FIELDASSIGN -->|Role or assignment mismatch| DENY
+    COMMCAP -->|Missing entitlement| DENY
+    HEALTH[Access-health review and reconciliation] -.-> PROVISION
+    HEALTH -.-> SALESIDENT
+    HEALTH -.-> MEMBERSHIP
+    classDef identity fill:#eef6ff,stroke:#2f6fed,color:#10223f
+    classDef role fill:#e8f7f4,stroke:#178f80,color:#0b3d3a
+    classDef gate fill:#fff4d6,stroke:#d99a00,color:#3f2f00
+    classDef result fill:#fff0ee,stroke:#cb5146,color:#5b1813
+    class ADMIN,CRM,FIELD,PROVISION,WPUSER,HEALTH identity
+    class MODULE,SALES,PM,FIELDUSER,COMM,SITEADMIN role
+    class SALESCAP,SALESIDENT,SALESRECORD,PMCAP,PMIDENT,PMASSIGN,FIELDCAP,MEMBERSHIP,FIELDASSIGN,COMMCAP,COMMSTATUS,ADMINCAP gate
+    class ALLOW,DENY result
+```
+
+The model separates **who can enter a module** (WordPress roles and capabilities) from **which business records they can reach** (identity status, active membership, and assignments where that module requires them). Sales and project identities are linked to CRM records; field organization membership is managed in WordPress. Administrators can review access-health findings and reconcile supported access records.
+
+These diagrams describe the current product direction and implementation patterns, not a promise that every portal uses every check. Before general availability, each release must be tested to confirm that every read and write path enforces its documented capability and record scope.
+
 ## Release status
 
 PowerPortals is in active productization and release-gate testing. The descriptions here communicate product direction; they are not a claim that every module, CRM provider, or distribution workflow is generally available today. Availability and commercial terms will be announced with a verified release.
