@@ -1,0 +1,21 @@
+# This repository is for public-facing documentation and approved brand assets.
+# Keep credentials, customer exports, and installable plugin packages out.
+.env
+.env.*
+!.env.example
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.pem
+*.key
+*.p12
+*.pfx
+wp-config.php
+**/wp-config.php
+node_modules/
+vendor/
+dist/
+build/
+.DS_Store
+Thumbs.db
