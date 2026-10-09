@@ -8,16 +8,27 @@
 Guided customer intake, connected sales workflows, and project communication for WordPress.</p>
 
 <p align="center">
-  <a href="#the-customer-journey">Customer journey</a> ·
-  <a href="#features-built-for-real-intake">Features</a> ·
-  <a href="#brand-ready-by-design">Brand controls</a> ·
-  <a href="#platform-and-access-architecture">Architecture</a> ·
-  <a href="#availability">Availability</a>
+  <a href="#the-customer-journey"><img src="https://img.shields.io/badge/Customer%20Journey-Explore-287dce?style=for-the-badge" alt="Explore the customer journey"></a>
+  <a href="#features-built-for-real-intake"><img src="https://img.shields.io/badge/Lead%20%26%20Quote%20Intake-Features-168f89?style=for-the-badge" alt="Lead and quote intake features"></a>
+  <a href="#brand-ready-by-design"><img src="https://img.shields.io/badge/Brand%20Controls-Explore-6f42c1?style=for-the-badge" alt="Explore brand controls"></a>
+  <a href="#platform-and-access-architecture"><img src="https://img.shields.io/badge/Architecture-View-10223f?style=for-the-badge" alt="View architecture"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/WORDPRESS-PORTAL%20PLATFORM-21759B?style=for-the-badge&amp;logo=wordpress&amp;logoColor=white" alt="WordPress portal platform">
+  <img src="https://img.shields.io/badge/PHP-8.3%20VALIDATED-777BB4?style=for-the-badge&amp;logo=php&amp;logoColor=white" alt="PHP 8.3 validated">
+  <img src="https://img.shields.io/badge/CRM-ZOHO%20FIRST-INTEGRATION-DB4437?style=for-the-badge" alt="Zoho is the first CRM integration target">
+  <img src="https://img.shields.io/badge/STATUS-PRE--RELEASE-57606a?style=for-the-badge" alt="Pre-release product status">
 </p>
 
 ---
 
-> **Pre-release · PHP 8.3** — The current development branch has passed PHP 8.3 automated checks and an isolated WordPress test. PowerPortals remains in private product validation; the capabilities below describe the product direction and are not a public plugin release.
+<p align="center">
+  <img src="assets/powerportals-journey.svg" alt="Concept illustration of the PowerPortals customer journey: guided intake, property confirmation, and a connected CRM and optional customer account handoff" width="100%">
+</p>
+
+> [!NOTE]
+> **Pre-release:** The current development branch has passed PHP 8.3 automated checks and an isolated WordPress test. PowerPortals remains in private product validation. This repository is a product overview, not a public plugin download; the illustration above is a concept view, not a released-product screenshot.
 
 ## Built around the way your business works
 
@@ -55,29 +66,52 @@ flowchart LR
 
 ## Features built for real intake
 
-### A service form that guides the conversation
+Explore the capabilities planned to carry a customer request from first contact through team review. Expand a feature for the details.
 
-Replace a one-box contact form with a step-by-step quote request. People can explain what they want to accomplish, select the services that apply, share project timing and budget context, and add photos of the existing space or planned work. The experience is being designed to support both a guided flow and a full-form view.
+<details>
+<summary><img src="https://img.shields.io/badge/EXPLORE-Guided%20Lead%20Intake%20%26%20Service%20Quotes-168f89?style=for-the-badge" alt="Explore guided lead intake and service quote features"></summary>
 
-### Service and location controls
+<br>
 
-Each installation is intended to control which service categories it offers, set a default state, and optionally restrict submissions to selected states. This keeps the form aligned with the company’s actual services and service area.
+Replace a one-box contact form with a step-by-step quote request. Customers can explain their goals, select the services that apply, share project timing and budget context, and add photos of the existing space or planned work. The experience is being designed to support both a guided flow and a full-form view.
 
-### Property context for property-related work
+</details>
 
-Customers can provide an address, verify or adjust a map pin, and review parcel details when public records are available. Florida parcel lookup is being developed as an add-on, including fields such as folio number and legal description. Public map and parcel sources support review; they do not establish ownership or replace official county records.
+<details>
+<summary><img src="https://img.shields.io/badge/EXPLORE-Property%20%26%20Parcel%20Context-4385ff?style=for-the-badge" alt="Explore property and parcel features"></summary>
 
-### A mapped path into Zoho CRM
+<br>
 
-Zoho CRM is the first integration target. The planned setup flow verifies the organization and authorized user, identifies required modules, and maps the form’s data to the organization’s fields. Live CRM lead handling must pass further validation before general availability.
+For property-related work, customers can provide an address, verify or adjust a map pin, and review parcel details when public records are available. Florida parcel lookup is being developed as an add-on, including fields such as folio number and legal description. Public map and parcel sources support review; they do not establish ownership or replace official county records.
 
-### An optional customer portal after submission
+</details>
+
+<details>
+<summary><img src="https://img.shields.io/badge/EXPLORE-Zoho%20Lead%20Handoff-DB4437?style=for-the-badge" alt="Explore Zoho lead handoff"></summary>
+
+<br>
+
+Zoho CRM is the first integration target. The planned setup flow verifies the organization and authorized user, identifies required modules, and maps form data to the organization’s fields. Live CRM lead handling must pass further validation before general availability.
+
+</details>
+
+<details>
+<summary><img src="https://img.shields.io/badge/EXPLORE-Optional%20Customer%20Portal-6f42c1?style=for-the-badge" alt="Explore optional customer portal"></summary>
+
+<br>
 
 The intended flow invites a lead to create an account after submitting a request. New accounts begin as **Pending Approval** while the team reviews the project. Account access can remain useful even if the original project is declined or paused; customers may return with a new request while earlier project records are archived.
 
-### A modular portal suite
+</details>
+
+<details>
+<summary><img src="https://img.shields.io/badge/EXPLORE-Modular%20Portal%20Suite-10223f?style=for-the-badge" alt="Explore the modular portal suite"></summary>
+
+<br>
 
 The broader product is planned to include customer, sales and onboarding, and project experiences, with optional bill-of-materials and commissions add-ons. Available modules will depend on the release and license.
+
+</details>
 
 ## Brand-ready by design
 

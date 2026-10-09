@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="610" viewBox="0 0 1600 610" role="img" aria-labelledby="title desc">
+  <title id="title">PowerPortals customer intake journey</title>
+  <desc id="desc">Concept illustration showing a guided service request, property verification, and team handoff to a CRM and optional customer account.</desc>
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#43d4c5"/>
+      <stop offset="1" stop-color="#4385ff"/>
+    </linearGradient>
+    <linearGradient id="wash" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#effaf9"/>
+      <stop offset="1" stop-color="#f1f5ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#10223f" flood-opacity=".09"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="610" rx="28" fill="#f7f9fc"/>
+  <path d="M0 0h1600v12H0z" fill="url(#brand)"/>
+  <text x="72" y="77" fill="#287dce" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="3">THE CUSTOMER JOURNEY</text>
+  <text x="72" y="125" fill="#10223f" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">A clearer request. A better project handoff.</text>
+  <text x="72" y="160" fill="#51647d" font-family="Arial, Helvetica, sans-serif" font-size="19">A concept view of the brand-adaptable intake experience in development.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="207" width="430" height="292" rx="20" fill="#fff" stroke="#dce6f1"/>
+    <rect x="72" y="207" width="430" height="10" rx="5" fill="#43c9be"/>
+    <circle cx="116" cy="260" r="22" fill="#e7f8f6"/>
+    <text x="116" y="267" text-anchor="middle" fill="#168f89" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">01</text>
+    <text x="153" y="267" fill="#10223f" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">Tell us what you’re planning</text>
+    <text x="104" y="317" fill="#64758a" font-family="Arial, Helvetica, sans-serif" font-size="17">A guided quote request captures the details</text>
+    <text x="104" y="343" fill="#64758a" font-family="Arial, Helvetica, sans-serif" font-size="17">that help a team understand the project.</text>
+    <rect x="104" y="376" width="366" height="43" rx="10" fill="#f4f8fb" stroke="#e1eaf2"/>
+    <circle cx="127" cy="397" r="8" fill="#43c9be"/>
+    <text x="146" y="403" fill="#30435a" font-family="Arial, Helvetica, sans-serif" font-size="16">Goals · service · timing · budget</text>
+    <rect x="104" y="432" width="366" height="43" rx="10" fill="#f4f8fb" stroke="#e1eaf2"/>
+    <circle cx="127" cy="453" r="8" fill="#4385ff"/>
+    <text x="146" y="459" fill="#30435a" font-family="Arial, Helvetica, sans-serif" font-size="16">Photos of the space or project</text>
+  </g>
+
+  <path d="M520 352h55" stroke="#8ca2bb" stroke-width="3" stroke-linecap="round"/>
+  <path d="m565 342 12 10-12 10" fill="none" stroke="#4385ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="585" y="207" width="430" height="292" rx="20" fill="#fff" stroke="#dce6f1"/>
+    <rect x="585" y="207" width="430" height="10" rx="5" fill="#4385ff"/>
+    <circle cx="629" cy="260" r="22" fill="#edf2ff"/>
+    <text x="629" y="267" text-anchor="middle" fill="#4385ff" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">02</text>
+    <text x="666" y="267" fill="#10223f" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">Confirm the property</text>
+    <text x="617" y="317" fill="#64758a" font-family="Arial, Helvetica, sans-serif" font-size="17">For location-based work, verify the site</text>
+    <text x="617" y="343" fill="#64758a" font-family="Arial, Helvetica, sans-serif" font-size="17">and review available public parcel details.</text>
+    <rect x="617" y="376" width="366" height="99" rx="12" fill="url(#wash)" stroke="#dce8f2"/>
+    <path d="M640 442c33-41 65-38 97-8s53 22 82-8 58-30 92-4 47 26 63 3" fill="none" stroke="#a9c7d8" stroke-width="3"/>
+    <path d="M812 390c-17 0-29 13-29 29 0 22 29 43 29 43s29-21 29-43c0-16-12-29-29-29Z" fill="#4385ff"/>
+    <circle cx="812" cy="419" r="9" fill="#fff"/>
+    <rect x="853" y="391" width="112" height="30" rx="15" fill="#fff" stroke="#d8e4ef"/>
+    <text x="909" y="411" text-anchor="middle" fill="#36516f" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700">PIN VERIFIED</text>
+    <text x="641" y="461" fill="#36516f" font-family="Arial, Helvetica, sans-serif" font-size="14">Address · map pin · parcel context</text>
+  </g>
+
+  <path d="M1033 352h55" stroke="#8ca2bb" stroke-width="3" stroke-linecap="round"/>
+  <path d="m1078 342 12 10-12 10" fill="none" stroke="#4385ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1098" y="207" width="430" height="292" rx="20" fill="#fff" stroke="#dce6f1"/>
+    <rect x="1098" y="207" width="430" height="10" rx="5" fill="#6f42c1"/>
+    <circle cx="1142" cy="260" r="22" fill="#f3edff"/>
+    <text x="1142" y="267" text-anchor="middle" fill="#6f42c1" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">03</text>
+    <text x="1179" y="267" fill="#10223f" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700">A connected next step</text>
+    <text x="1130" y="317" fill="#64758a" font-family="Arial, Helvetica, sans-serif" font-size="17">The team gets a structured request; the</text>
+    <text x="1130" y="343" fill="#64758a" font-family="Arial, Helvetica, sans-serif" font-size="17">customer can opt into an account.</text>
+    <rect x="1130" y="376" width="366" height="43" rx="10" fill="#f4f8fb" stroke="#e1eaf2"/>
+    <circle cx="1153" cy="397" r="8" fill="#6f42c1"/>
+    <text x="1172" y="403" fill="#30435a" font-family="Arial, Helvetica, sans-serif" font-size="16">Zoho lead handoff · in development</text>
+    <rect x="1130" y="432" width="366" height="43" rx="10" fill="#f4f8fb" stroke="#e1eaf2"/>
+    <circle cx="1153" cy="453" r="8" fill="#43c9be"/>
+    <text x="1172" y="459" fill="#30435a" font-family="Arial, Helvetica, sans-serif" font-size="16">Optional account · pending approval</text>
+  </g>
+
+  <text x="72" y="556" fill="#6c7f94" font-family="Arial, Helvetica, sans-serif" font-size="14">Concept illustration · Not a screenshot of a released product</text>
+  <text x="1528" y="556" text-anchor="end" fill="#287dce" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700">POWERPORTALS</text>
+</svg>
