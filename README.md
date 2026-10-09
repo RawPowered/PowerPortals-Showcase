@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/powerportals-logo.svg" alt="PowerPortals" width="400">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/powerportals-logo-dark.svg">
+    <img src="assets/powerportals-logo.svg" alt="PowerPortals" width="400">
+  </picture>
 </p>
 
 <h1 align="center">PowerPortals</h1>
@@ -17,7 +20,7 @@ Guided customer intake, connected sales workflows, and project communication for
 <p align="center">
   <img src="https://img.shields.io/badge/WORDPRESS-PORTAL%20PLATFORM-21759B?style=for-the-badge&amp;logo=wordpress&amp;logoColor=white" alt="WordPress portal platform">
   <img src="https://img.shields.io/badge/PHP-8.3%20VALIDATED-777BB4?style=for-the-badge&amp;logo=php&amp;logoColor=white" alt="PHP 8.3 validated">
-  <img src="https://img.shields.io/badge/CRM-ZOHO%20FIRST-INTEGRATION-DB4437?style=for-the-badge" alt="Zoho is the first CRM integration target">
+  <img src="https://img.shields.io/badge/ZOHO-First%20CRM-DB4437?style=for-the-badge" alt="Zoho is the first CRM integration target">
   <img src="https://img.shields.io/badge/STATUS-PRE--RELEASE-57606a?style=for-the-badge" alt="Pre-release product status">
 </p>
 
