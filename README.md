@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/powerportals-logo-dark.svg">
-    <img src="assets/powerportals-logo.svg" alt="PowerPortals" width="400">
-  </picture>
+  <img src="assets/powerportals-mark.svg" alt="" width="88">
 </p>
 
 <h1 align="center">PowerPortals</h1>

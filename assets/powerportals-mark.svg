@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180" role="img" aria-labelledby="title desc">
+  <title id="title">PowerPortals</title>
+  <desc id="desc">A teal-to-blue portal arch mark.</desc>
+  <defs>
+    <linearGradient id="portal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#43d4c5"/>
+      <stop offset="1" stop-color="#4385ff"/>
+    </linearGradient>
+  </defs>
+  <path d="M22 142V79C22 39 50 10 90 10s68 29 68 69v63h-24V79c0-26-17-45-44-45S46 53 46 79v63H22Z" fill="url(#portal)"/>
+  <path d="M58 142V83c0-19 13-32 32-32s32 13 32 32v59H98V83c0-5-3-8-8-8s-8 3-8 8v59H58Z" fill="#10223f"/>
+  <path d="M12 159h156" stroke="#4385ff" stroke-width="8" stroke-linecap="round"/>
+</svg>
