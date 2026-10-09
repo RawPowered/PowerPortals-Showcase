@@ -164,7 +164,9 @@ These diagrams describe the current product direction and implementation pattern
 
 ## Release status
 
-PowerPortals is in active productization and release-gate testing. The descriptions here communicate product direction; they are not a claim that every module, CRM provider, or distribution workflow is generally available today. Availability and commercial terms will be announced with a verified release.
+PowerPortals remains in pre-release productization and release-gate testing. PHP 8.3 compatibility is being validated in continuous integration and an isolated WordPress environment. The guided intake, Zoho lead-sync, and Florida parcel-lookup capabilities are still under private development and validation; they are not available as public downloads.
+
+The descriptions here communicate product direction, not a claim that every module, CRM provider, or distribution workflow is generally available. A public package, supported-version matrix, setup guide, and commercial terms will be announced after release checks are complete.
 
 ## Screenshots and demonstrations
 
