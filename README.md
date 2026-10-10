@@ -1,46 +1,72 @@
 <p align="center">
-  <img src="assets/powerportals-mark.svg" alt="" width="88">
+  <img src="assets/powerportals-mark.svg" alt="PowerPortals" width="78">
 </p>
 
 <h1 align="center">PowerPortals</h1>
 
-<p align="center"><strong>From first request to active project—one branded portal experience.</strong><br>
-Guided customer intake, connected sales workflows, and project communication for WordPress.</p>
+<p align="center"><strong>One connected portal experience, configured for your business.</strong><br>
+Guided project intake, customer follow-up, and Zoho CRM workflows for WordPress.</p>
 
 <p align="center">
-  <a href="#the-customer-journey"><img src="https://img.shields.io/badge/Customer%20Journey-Explore-287dce?style=for-the-badge" alt="Explore the customer journey"></a>
-  <a href="#features-built-for-real-intake"><img src="https://img.shields.io/badge/Lead%20%26%20Quote%20Intake-Features-168f89?style=for-the-badge" alt="Lead and quote intake features"></a>
-  <a href="#brand-ready-by-design"><img src="https://img.shields.io/badge/Brand%20Controls-Explore-6f42c1?style=for-the-badge" alt="Explore brand controls"></a>
-  <a href="#platform-and-access-architecture"><img src="https://img.shields.io/badge/Architecture-View-10223f?style=for-the-badge" alt="View architecture"></a>
+  <img src="https://img.shields.io/badge/WordPress-Portal%20platform-21759B?style=for-the-badge&amp;logo=wordpress&amp;logoColor=white" alt="WordPress portal platform">
+  <img src="https://img.shields.io/badge/PHP-8.3%20target-777BB4?style=for-the-badge&amp;logo=php&amp;logoColor=white" alt="PHP 8.3 target">
+  <img src="https://img.shields.io/badge/CRM-Zoho%20first-DB4437?style=for-the-badge" alt="Zoho is the first CRM integration">
+  <img src="https://img.shields.io/badge/Release-Private%20validation-57606a?style=for-the-badge" alt="Private validation release status">
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/WORDPRESS-PORTAL%20PLATFORM-21759B?style=for-the-badge&amp;logo=wordpress&amp;logoColor=white" alt="WordPress portal platform">
-  <img src="https://img.shields.io/badge/PHP-8.3%20VALIDATED-777BB4?style=for-the-badge&amp;logo=php&amp;logoColor=white" alt="PHP 8.3 validated">
-  <img src="https://img.shields.io/badge/ZOHO-First%20CRM-DB4437?style=for-the-badge" alt="Zoho is the first CRM integration target">
-  <img src="https://img.shields.io/badge/STATUS-PRE--RELEASE-57606a?style=for-the-badge" alt="Pre-release product status">
-</p>
-
----
+> [!IMPORTANT]
+> **Pre-release product.** PowerPortals is in private development and validation. This public repository presents the product direction; it does not provide installable software, a license, or a general-availability date. The illustration and diagrams below explain intended workflows and architecture, not a released-product screenshot or a security certification.
 
 <p align="center">
   <img src="assets/powerportals-journey.svg" alt="Concept illustration of the PowerPortals customer journey: guided intake, property confirmation, and a connected CRM and optional customer account handoff" width="100%">
 </p>
 
-> [!NOTE]
-> **Pre-release:** The current development branch has passed PHP 8.3 automated checks and an isolated WordPress test. PowerPortals remains in private product validation. This repository is a product overview, not a public plugin download; the illustration above is a concept view, not a released-product screenshot.
+## A clearer path from inquiry to project
 
-## Built around the way your business works
+PowerPortals is a modular WordPress portal suite designed to help service businesses collect a useful project request, route it into their CRM, and give customers a place to follow up. Organizations configure the brand, services, service area, CRM field mappings, and optional portal modules to fit their operations.
 
-PowerPortals is a modular portal platform for WordPress. It is being developed to carry a customer from a clear first request into an organized business workflow, using the company’s brand, services, service area, and CRM setup.
-
-| **Capture better requests** | **Connect the handoff** | **Keep the relationship open** |
+| Capture useful project detail | Connect the team workflow | Keep the customer relationship open |
 |:---|:---|:---|
-| A guided service-quote experience collects project goals, service selections, property details, timing, budget context, and photos. | Zoho CRM is the first integration target, with field mapping intended to fit an organization’s existing setup. | An optional customer account is designed to stay available even when a project does not proceed, so customers can return with a new request. |
+| Guide people through goals, service choices, property details, timing, budget context, and project photos. | Connect the intake to Zoho CRM, with setup designed around each organization’s existing modules and fields. | Offer account creation after submission. Project decisions and customer-account status are handled separately. |
 
-## The customer journey
+## Capabilities in private validation
 
-The goal is a connected path from inquiry through review. Customers can submit a project request first, then choose whether to create an account. The account and project review have separate outcomes.
+The following capabilities have working development implementations or beta companions. Each remains subject to release and compatibility review before general availability.
+
+### Guided quote and lead intake
+
+A step-by-step flow helps customers describe what they want to accomplish, select relevant services, and provide timing, budget, scope, and photos. Customers can switch to a full-form view. Service-specific questions can capture the details needed to scope different requests, including roof repairs, replacements, and new construction.
+
+Administrators can enable or disable service types and configure the default state and accepted-state restrictions for an installation. That allows a business to publish only the work and service area it currently supports.
+
+### Property and parcel context
+
+Customers can enter a property address, review a satellite map, adjust the pin, and edit coordinates directly when needed. When a selected public source returns a match, parcel identifiers and legal-description details can be shown for review. Public GIS matches are reference information; they do not establish ownership or replace county records.
+
+Florida Parcel Finder is being developed as a separate companion for Florida property records. Coverage depends on the county and public service availability, so a match is not guaranteed statewide.
+
+### Zoho CRM and companion widgets
+
+Zoho CRM is the first integration target. The setup direction supports reviewing a company’s existing modules and fields and mapping PowerPortals concepts to the customer’s CRM schema. The CRM lead handoff remains under private validation.
+
+The private beta widget suite includes:
+
+- **Zoho Setup Assistant:** discovers module and field metadata, suggests type-compatible mappings, and exports a review draft. It does not create modules, change CRM settings, or activate mappings.
+- **Florida Property Verification:** displays a record’s location and queries selected public Florida parcel sources. It does not write parcel data back to CRM, and source coverage is partial.
+
+These Zoho widget ZIPs are private beta artifacts, not public downloads. Mapping import, optional schema provisioning, permissions, and supported-edition compatibility require further validation.
+
+### Optional customer portal
+
+After submitting a project request, a customer may choose to create an account. The account begins as **Customer Pending Approval**, independently of whether the project proceeds. Customers can return to view current requests and project history, and can submit another request later. A project that does not move forward can be archived while the customer account remains available.
+
+### A modular suite
+
+The product architecture is intended to support customer service and sales workflows first, followed by project and deal management. Materials, field operations, and other specialized capabilities can be offered as optional modules when they fit a company’s needs and the release supports them.
+
+## Customer journey
+
+The diagram shows the intended customer flow. CRM handoff, account onboarding, and project lifecycle behavior remain under private validation.
 
 ```mermaid
 flowchart LR
@@ -64,72 +90,21 @@ flowchart LR
     PENDING --> NEW
 ```
 
-*This diagram shows the intended workflow. CRM connectivity, account onboarding, and project lifecycle behavior remain under private validation.*
+## Brand and service controls
 
-## Features built for real intake
+PowerPortals is designed to adapt to the installing organization instead of presenting a single company’s identity or service catalog. Planned administrator controls include:
 
-Explore the capabilities planned to carry a customer request from first contact through team review. Expand a feature for the details.
-
-<details>
-<summary><img src="https://img.shields.io/badge/EXPLORE-Guided%20Lead%20Intake%20%26%20Service%20Quotes-168f89?style=for-the-badge" alt="Explore guided lead intake and service quote features"></summary>
-
-<br>
-
-Replace a one-box contact form with a step-by-step quote request. Customers can explain their goals, select the services that apply, share project timing and budget context, and add photos of the existing space or planned work. The experience is being designed to support both a guided flow and a full-form view.
-
-</details>
-
-<details>
-<summary><img src="https://img.shields.io/badge/EXPLORE-Property%20%26%20Parcel%20Context-4385ff?style=for-the-badge" alt="Explore property and parcel features"></summary>
-
-<br>
-
-For property-related work, customers can provide an address, verify or adjust a map pin, and review parcel details when public records are available. Florida parcel lookup is being developed as an add-on, including fields such as folio number and legal description. Public map and parcel sources support review; they do not establish ownership or replace official county records.
-
-</details>
-
-<details>
-<summary><img src="https://img.shields.io/badge/EXPLORE-Zoho%20Lead%20Handoff-DB4437?style=for-the-badge" alt="Explore Zoho lead handoff"></summary>
-
-<br>
-
-Zoho CRM is the first integration target. The planned setup flow verifies the organization and authorized user, identifies required modules, and maps form data to the organization’s fields. Live CRM lead handling must pass further validation before general availability.
-
-</details>
-
-<details>
-<summary><img src="https://img.shields.io/badge/EXPLORE-Optional%20Customer%20Portal-6f42c1?style=for-the-badge" alt="Explore optional customer portal"></summary>
-
-<br>
-
-The private 0.3.0 candidate presents the account as a customer hub with separate **Current requests**, **Project history**, and **Account** tabs. Request cards bring the project status and next step forward, while archived requests remain available when a project does not proceed. Account creation is optional after submission; a new account begins as **Customer Pending Approval**, independently of project approval, and the customer can return to submit another request. This experience is under private validation and is not a public plugin download or a production-readiness claim.
-
-</details>
-
-<details>
-<summary><img src="https://img.shields.io/badge/EXPLORE-Modular%20Portal%20Suite-10223f?style=for-the-badge" alt="Explore the modular portal suite"></summary>
-
-<br>
-
-The broader product is planned to include customer, sales and onboarding, and project experiences, with optional bill-of-materials and commissions add-ons. Available modules will depend on the release and license.
-
-</details>
-
-## Brand-ready by design
-
-PowerPortals is being built as a brand-adaptable product rather than a form tied to one company. Administrators are intended to be able to configure:
-
-| Control | What it shapes |
+| Setting | What it controls |
 |:---|:---|
-| Brand identity | The portal presentation for the organization |
-| Service catalog | Which service and project types appear in intake |
-| State settings | A default state and optional accepted-state restrictions |
-| CRM field mapping | How submitted information fits the organization’s CRM setup |
-| Portal modules | Which licensed capabilities are enabled for that installation |
+| Brand identity | The portal’s colors, logo, and customer-facing presentation |
+| Service catalog | Which service and project types customers can select |
+| State rules | The default state and, when enabled, the accepted states |
+| CRM mappings | How submitted information corresponds to the organization’s Zoho modules and fields |
+| Portal modules | Which capabilities are enabled for that installation |
 
-## Platform and access architecture
+## Access architecture
 
-PowerPortals uses WordPress as the portal host and identity foundation. Requests pass through WordPress authentication and module-level capability checks; workflows can also apply identity, status, membership, assignment, or record-scope checks before data is returned. The exact checks vary by module and release.
+WordPress provides the portal host and identity foundation. Requests are intended to pass through authentication and module-level access checks, with record-level rules for identity, status, membership, assignments, and project scope. The exact checks vary by module and must be verified for each release.
 
 ```mermaid
 flowchart LR
@@ -163,11 +138,11 @@ flowchart LR
     class BLOCK denied
 ```
 
-The diagram is an architecture overview, not a security certification. Host controls such as TLS, account MFA, database and backup protection, and credential protection at rest must be configured and verified for each deployment.
+The architecture diagram describes a control model; it is not a security certification. Hosting, TLS, account protection, backups, and credential storage must also be configured and verified for each deployment.
 
-### Roles, capabilities, and record scope
+### Roles and record scope
 
-Portal roles establish which modules a user can enter. Module workflows then apply relevant identity, status, organization, or project checks before granting access to business records. These checks are module-specific and must be verified for each release.
+The access model separates the user’s role, module entitlement, and allowed record scope. A module should expose only the actions and records permitted by the applicable checks.
 
 ```mermaid
 flowchart TB
@@ -220,26 +195,24 @@ flowchart TB
     class ALLOW,DENY result
 ```
 
-These diagrams describe the product’s current architecture direction and implementation patterns. Before general availability, every enabled module must be tested to confirm that its documented access rules cover each read and write path.
+Every enabled module must be tested against its documented read and write paths before general availability.
 
 ## Intended setup
 
 1. Install a licensed PowerPortals package on a supported WordPress site.
-2. Configure the organization’s brand, offered services, accepted states, and licensed modules.
-3. Connect a Zoho sandbox, verify the organization and authorized user, and map fields for enabled workflows.
+2. Configure the organization’s brand, service catalog, accepted states, and enabled modules.
+3. Connect a Zoho sandbox, verify the organization and authorized user, and map fields for the enabled workflows.
 4. Review setup and access checks, then publish portal pages when release requirements are met.
 
-The supported-version matrix, complete setup guide, distribution instructions, and commercial terms will be published with a verified release.
+The supported-version matrix, complete setup guide, distribution instructions, and commercial terms will accompany a verified release.
 
-## Availability
+## Availability and security
 
-PowerPortals is not yet available as a public plugin download. The lead-intake and service-quote form, Zoho lead sync, Florida parcel lookup, and optional customer intake portal remain under private development and validation. No public package or general-availability date is being announced yet.
+PowerPortals is not currently offered as a public plugin download. The lead-intake form, Zoho lead sync, Florida parcel lookup, and optional customer portal remain under private development and validation. No general-availability date is announced.
 
 This repository is the public product overview and documentation home. It does not contain plugin source code or installable packages and does not grant a license to PowerPortals software, trademarks, or product materials.
 
-## Security and testing
-
-Integrations are being developed for scoped credentials and sandbox-first validation. Use a dedicated CRM sandbox and a separate WordPress test site for early testing; keep production credentials and customer data out of test environments. Do not post credentials, tokens, customer records, or vulnerability details in public issues. Use the repository’s **Security** tab to report a vulnerability privately.
+For early testing, use a dedicated WordPress test site and Zoho sandbox. Keep production credentials and customer data out of test environments. Do not post credentials, tokens, customer records, or vulnerability details in public issues; use the repository’s **Security** tab for private vulnerability reports.
 
 ---
 
