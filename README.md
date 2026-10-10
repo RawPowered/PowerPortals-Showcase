@@ -55,10 +55,12 @@ flowchart LR
     SUBMIT --> ACCOUNT{Create customer account?}
     ACCOUNT -->|Optional| PENDING[Customer account<br/>Pending Approval]
     ACCOUNT -->|Not now| REVIEW[Team reviews project]
-    PENDING --> REVIEW
+    PENDING --> HUB[Optional customer hub<br/>Current · History · Account]
+    HUB --> REVIEW
     REVIEW -->|Project proceeds| ACTIVE[Project workflow]
     REVIEW -->|Does not proceed| ARCHIVE[Project request archived]
     ARCHIVE --> NEW[Customer may submit another request]
+    HUB --> NEW
     PENDING --> NEW
 ```
 
@@ -100,7 +102,7 @@ Zoho CRM is the first integration target. The planned setup flow verifies the or
 
 <br>
 
-The intended flow invites a lead to create an account after submitting a request. New accounts begin as **Pending Approval** while the team reviews the project. Account access can remain useful even if the original project is declined or paused; customers may return with a new request while earlier project records are archived.
+The private 0.3.0 candidate presents the account as a customer hub with separate **Current requests**, **Project history**, and **Account** tabs. Request cards bring the project status and next step forward, while archived requests remain available when a project does not proceed. Account creation is optional after submission; a new account begins as **Customer Pending Approval**, independently of project approval, and the customer can return to submit another request. This experience is under private validation and is not a public plugin download or a production-readiness claim.
 
 </details>
 
