@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative PowerPortals customer hub</title>
+  <desc id="desc">A neutral customer portal concept with current requests, project history, account status, next steps, and a request another quote action.</desc>
+  <defs>
+    <linearGradient id="hero" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#10283c"/>
+      <stop offset="1" stop-color="#174e58"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#153144" flood-opacity=".08"/>
+    </filter>
+    <style>
+      text{font-family:Inter,Segoe UI,Arial,sans-serif;fill:#1a3241} .muted{fill:#647985} .tiny{font-size:12px;letter-spacing:1.6px;font-weight:700} .label{font-size:13px;letter-spacing:1.2px;font-weight:700} .body{font-size:16px} .small{font-size:14px} .card{fill:#fff;stroke:#dce5e8;stroke-width:1.3} .line{stroke:#e8eef0;stroke-width:1.4}
+    </style>
+  </defs>
+  <rect width="1440" height="960" fill="#f3f6f5"/>
+  <rect width="1440" height="78" fill="#fff"/>
+  <path d="M0 77.5H1440" stroke="#e0e8eb"/>
+  <rect x="94" y="18" width="42" height="42" rx="13" fill="#123044"/>
+  <path d="M106 47V30h8.8c5.5 0 8.5 2.5 8.5 7s-3 7-8.5 7h-2.3v3z" fill="#39c3ab"/>
+  <text x="149" y="45" font-size="21" font-weight="750">PowerPortals</text>
+  <text x="294" y="45" class="small muted">CUSTOMER WORKSPACE</text>
+  <rect x="1194" y="20" width="152" height="38" rx="19" fill="#fff" stroke="#d8e2e6"/>
+  <circle cx="1218" cy="39" r="9" fill="#d8efea"/>
+  <path d="M1214 39h8M1218 35v8" stroke="#137b70" stroke-width="1.7" stroke-linecap="round"/>
+  <text x="1235" y="44" class="small" font-weight="650">Account</text>
+
+  <text x="96" y="128" class="tiny" fill="#d96b36">YOUR CUSTOMER HUB</text>
+  <text x="96" y="178" font-size="36" font-weight="730">Your work, all in one place.</text>
+  <text x="96" y="208" class="body muted">Follow project requests, keep useful history, and reach your team when you need help.</text>
+  <rect x="1145" y="143" width="201" height="50" rx="10" fill="#d96b36"/>
+  <text x="1171" y="174" font-size="15" fill="#fff" font-weight="700">Request another quote</text>
+
+  <rect x="96" y="244" width="1248" height="67" rx="14" fill="#fff" stroke="#dce5e8"/>
+  <rect x="111" y="255" width="190" height="45" rx="9" fill="#eaf5f3"/>
+  <text x="135" y="283" font-size="15" fill="#147d72" font-weight="700">Current requests</text>
+  <text x="341" y="283" class="body muted">Project history</text>
+  <text x="515" y="283" class="body muted">Account</text>
+  <text x="1276" y="283" class="small muted" text-anchor="end">1 open request</text>
+
+  <rect x="96" y="337" width="824" height="432" rx="17" class="card" filter="url(#shadow)"/>
+  <text x="128" y="378" class="label muted">CURRENT REQUEST</text>
+  <rect x="732" y="357" width="153" height="31" rx="15" fill="#fff4df"/>
+  <circle cx="751" cy="372.5" r="4" fill="#dc8b27"/>
+  <text x="763" y="377" font-size="12" fill="#94601e" font-weight="700">IN REVIEW</text>
+  <text x="128" y="429" font-size="26" font-weight="700">Kitchen renovation</text>
+  <text x="128" y="458" class="body muted">Request PP-2048 · Submitted October 8</text>
+  <rect x="128" y="488" width="758" height="1" fill="#e8eef0"/>
+  <text x="128" y="526" class="label muted">WHAT HAPPENS NEXT</text>
+  <circle cx="141" cy="568" r="12" fill="#d9f0eb"/>
+  <path d="m136 568 3.3 3.3 6.5-7" fill="none" stroke="#147d72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="168" y="565" class="body" font-weight="650">Request received</text>
+  <text x="168" y="587" class="small muted">Your project details are saved in your request history.</text>
+  <path d="M141 584v38" stroke="#c9d8dc" stroke-width="2" stroke-dasharray="4 5"/>
+  <circle cx="141" cy="636" r="12" fill="#fff0df"/>
+  <circle cx="141" cy="636" r="4" fill="#d96b36"/>
+  <text x="168" y="633" class="body" font-weight="650">Team review</text>
+  <text x="168" y="655" class="small muted">A team member will follow up with the next step.</text>
+  <path d="M141 652v38" stroke="#c9d8dc" stroke-width="2" stroke-dasharray="4 5"/>
+  <circle cx="141" cy="704" r="12" fill="#f0f3f4"/>
+  <circle cx="141" cy="704" r="3" fill="#82949d"/>
+  <text x="168" y="709" class="body muted">Schedule a conversation</text>
+  <rect x="128" y="734" width="146" height="1" fill="#e8eef0"/>
+
+  <rect x="948" y="337" width="396" height="202" rx="17" class="card" filter="url(#shadow)"/>
+  <text x="980" y="378" class="label muted">ACCOUNT</text>
+  <rect x="980" y="399" width="232" height="34" rx="17" fill="#edf3ff"/>
+  <circle cx="998" cy="416" r="4" fill="#5579c8"/>
+  <text x="1010" y="421" font-size="12" fill="#405f9e" font-weight="700">CUSTOMER PENDING APPROVAL</text>
+  <text x="980" y="464" class="small">Account review and project review are separate.</text>
+  <text x="980" y="488" class="small muted">Your request remains available while the account</text>
+  <text x="980" y="508" class="small muted">is being reviewed.</text>
+
+  <rect x="948" y="559" width="396" height="210" rx="17" class="card" filter="url(#shadow)"/>
+  <text x="980" y="601" class="label muted">YOUR HISTORY</text>
+  <rect x="980" y="623" width="52" height="52" rx="12" fill="#e9f4f2"/>
+  <path d="M995 648h22m-18-8h14m-14 16h10" stroke="#177d73" stroke-width="2" stroke-linecap="round"/>
+  <text x="1050" y="645" class="body" font-weight="650">Past requests stay organized</text>
+  <text x="1050" y="670" class="small muted">Return to closed or archived projects anytime.</text>
+  <path d="M980 700h332" class="line"/>
+  <text x="980" y="734" class="small" fill="#147d72" font-weight="700">View project history</text>
+  <path d="M1303 729l5 5-5 5" fill="none" stroke="#147d72" stroke-width="1.8"/>
+
+  <text x="96" y="826" class="small muted">Illustrative layout · fictional project details · no customer records shown</text>
+  <rect x="96" y="854" width="1248" height="1" fill="#dce5e8"/>
+  <text x="96" y="889" class="tiny muted">POWERPORTALS CUSTOMER EXPERIENCE</text>
+  <text x="1344" y="889" class="small muted" text-anchor="end">Brand, modules, and workflow depend on the installation.</text>
+</svg>

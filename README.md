@@ -15,7 +15,7 @@ Guided project intake, customer follow-up, and Zoho CRM workflows for WordPress.
 </p>
 
 > [!IMPORTANT]
-> **Pre-release product.** PowerPortals is in private development and validation. This public repository presents the product direction; it does not provide installable software, a license, or a general-availability date. The illustration and diagrams below explain intended workflows and architecture, not a released-product screenshot or a security certification.
+> **Pre-release product.** PowerPortals is in private development and validation. This public repository presents the product direction; it does not provide installable software, a license, or a general-availability date. The product-tour images show the current development experience using fictional demo data. They are not a compatibility guarantee or security certification.
 
 <p align="center">
   <img src="assets/powerportals-journey.svg" alt="Concept illustration of the PowerPortals customer journey: guided intake, property confirmation, and a connected CRM and optional customer account handoff" width="100%">
@@ -28,6 +28,51 @@ PowerPortals is a modular WordPress portal suite designed to help service busine
 | Capture useful project detail | Connect the team workflow | Keep the customer relationship open |
 |:---|:---|:---|
 | Guide people through goals, service choices, property details, timing, budget context, and project photos. | Connect the intake to Zoho CRM, with setup designed around each organization’s existing modules and fields. | Offer account creation after submission. Project decisions and customer-account status are handled separately. |
+
+## Product tour
+
+PowerPortals brings the customer’s first project request and the team’s follow-up into one configurable experience. These screens are from an isolated test installation and use fictional sample records.
+
+### A guided project request
+
+Customers choose the work they have in mind, add project context, and verify the property with a satellite view. Roofing requests can branch into repair, replacement, and new-roof paths, with material selections that match the request.
+
+<table>
+  <tr>
+    <td width="50%"><strong>Choose a project direction</strong><br><img src="assets/screenshots/quote-project-picker.png" alt="Project intake with large visual service choices" width="100%"></td>
+    <td width="50%"><strong>Describe the property and recent purchase</strong><br><img src="assets/screenshots/property-intake-details.png" alt="Intake questions about the property type, customer relationship, and recent purchase" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>Review existing roof materials</strong><br><img src="assets/screenshots/roof-existing-materials.png" alt="Roofing intake with image-based existing roof material choices" width="100%"></td>
+    <td width="50%"><strong>Choose a target roof material</strong><br><img src="assets/screenshots/roof-material-selection.png" alt="Roofing intake with image-based material change choices" width="100%"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><strong>Confirm the project location</strong><br><img src="assets/screenshots/property-satellite-map.png" alt="Satellite property map with a location pin and map controls" width="100%"></td>
+  </tr>
+</table>
+
+### Connected team workspaces
+
+The portal suite is designed to give each team a focused view of its part of the customer and project journey. These screens are illustrative module views with fictional demonstration records.
+
+<table>
+  <tr>
+    <td width="50%"><strong>Sales workspace</strong><br><img src="assets/screenshots/sales-portal.png" alt="Sales portal workspace showing sample pipeline information" width="100%"></td>
+    <td width="50%"><strong>Project workspace</strong><br><img src="assets/screenshots/project-portal.png" alt="Project portal workspace showing sample project progress" width="100%"></td>
+  </tr>
+  <tr>
+    <td width="50%"><strong>Field workspace</strong><br><img src="assets/screenshots/field-portal.png" alt="Field portal for site verification and project photos" width="100%"></td>
+    <td width="50%"><strong>Materials workspace</strong><br><img src="assets/screenshots/materials-portal.png" alt="Materials portal with an illustrative bill of materials" width="100%"></td>
+  </tr>
+</table>
+
+### An optional customer hub
+
+Customers can keep their account available even when a project does not proceed. This neutral mockup illustrates the planned hub for current requests, project history, and account details; it is a concept image rather than a screenshot of a released customer portal.
+
+<p align="center"><img src="assets/screenshots/customer-hub-concept.svg" alt="Illustrative customer hub concept showing a current request, project history, and account status" width="100%"></p>
+
+<p align="center"><sub>All captured screens use fictional demonstration data. The customer hub image is an illustrative concept. Product capabilities and integrations remain under private validation.</sub></p>
 
 ## Capabilities in private validation
 
