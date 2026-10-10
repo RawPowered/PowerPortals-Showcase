@@ -66,6 +66,19 @@ The portal suite is designed to give each team a focused view of its part of the
   </tr>
 </table>
 
+### Zoho CRM companion widgets
+
+The PowerPortals family also includes separately packaged Zoho CRM widgets that bring setup and property verification into the CRM workspace. They are designed as building blocks the suite can expand over time, with capabilities chosen to fit each customer’s Zoho setup.
+
+<table>
+  <tr>
+    <td width="50%"><strong>Setup Assistant · review existing CRM modules and fields</strong><br><img src="assets/screenshots/zoho-setup-assistant.png" alt="PowerPortals Zoho Setup Assistant showing suggested mappings between CRM modules and portal concepts" width="100%"></td>
+    <td width="50%"><strong>Florida Property Verification · review a parcel match in context</strong><br><img src="assets/screenshots/zoho-property-verification.png" alt="PowerPortals Florida property widget showing a satellite pin, CRM location fields, and a clearly fictional sample parcel match" width="100%"></td>
+  </tr>
+</table>
+
+The Setup Assistant reads available schema metadata and exports a review draft; it does not create modules or change CRM settings. The property widget reads a CRM record and queries selected public Florida parcel sources; it does not write results back to CRM. Both packages are development beta and are not public downloads. The previews use a mock Zoho connection and fictional CRM and parcel data. Release and customer-specific compatibility checks remain in progress.
+
 ### An optional customer hub
 
 Customers can keep their account available even when a project does not proceed. This neutral mockup illustrates the planned hub for current requests, project history, and account details; it is a concept image rather than a screenshot of a released customer portal.
