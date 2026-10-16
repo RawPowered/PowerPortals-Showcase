@@ -255,14 +255,27 @@ flowchart TB
 
 Every enabled module must be tested against its documented read and write paths before general availability.
 
-## Intended setup
+## Commercial installation model
 
-1. Install a licensed PowerPortals package on a supported WordPress site.
-2. Configure the organization’s brand, service catalog, accepted states, and enabled modules.
-3. Connect a Zoho sandbox, verify the organization and authorized user, and map fields for the enabled workflows.
-4. Review setup and access checks, then publish portal pages when release requirements are met.
+PowerPortals targets a live WordPress website on the customer’s managed host, private server or VPS. Zoho companion widgets are uploaded directly to Zoho CRM and hosted by Zoho.
 
-The supported-version matrix, complete setup guide, distribution instructions, and commercial terms will accompany a verified release.
+| Install | Destination | Administrator action |
+| --- | --- | --- |
+| Approved licensed portal ZIP | Customer’s WordPress site | Plugins → Add New Plugin → Upload Plugin; install and activate after release/migration checks |
+| Zoho widget ZIP | Customer’s Zoho CRM organization | Setup → Developer Hub → Widgets; choose Zoho hosting, upload and set the documented entry page |
+| CRM connection | WordPress server-side integration | Register the real HTTPS callback, authorize the intended Zoho organization and review module/field mappings |
+| Native functions and workflows | Zoho CRM | Install the required functions, connections and bindings for the purchased capability |
+
+1. Confirm the licensed release, real domain, target WordPress installation and intended Zoho organization.
+2. Back up the WordPress files/database and complete the release’s hosted acceptance checks before enabling customer traffic.
+3. Install the approved plugin through WordPress administration and configure brand, services, service area and portal modules.
+4. Connect Zoho from the protected server-side integration; review callback URLs, scopes and field mappings.
+5. Upload the required Zoho widgets with Zoho internal hosting and attach their CRM placements. Widget installation and WordPress synchronization are separate setup steps.
+6. Verify the supported end-to-end request, follow-up and access-reconciliation flows before handover.
+
+[Read the live-server deployment and WordPress ↔ Zoho setup guide](DEPLOYMENT.md).
+
+PowerPortals remains under development and is not a generally available production release. Its current development build blocks production initialization. These steps describe the intended deployment of an approved commercial release; they do not bypass its release gates. The separate widget library’s public evaluation packages have their own documented limitations.
 
 ## Availability and security
 
