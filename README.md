@@ -77,7 +77,7 @@ The PowerPortals family also includes separately packaged Zoho CRM widgets that 
   </tr>
 </table>
 
-The Setup Assistant reads available schema metadata and exports a review draft; it does not create modules or change CRM settings. The property widget reads a CRM record and queries selected public Florida parcel sources; it does not write results back to CRM. Both packages are development beta and are not public downloads. The previews use a mock Zoho connection and fictional CRM and parcel data. Release and customer-specific compatibility checks remain in progress.
+The Setup Assistant reads available schema metadata and exports a review draft; it does not create modules or change CRM settings. The property widget reads a CRM record and queries selected public Florida parcel sources; it does not write results back to CRM. Both components remain under private commercial validation and are supplied only through an agreed private delivery. The previews use a mock Zoho connection and fictional CRM and parcel data. Release and customer-specific compatibility checks remain in progress.
 
 ### An optional customer hub
 
@@ -107,12 +107,12 @@ Florida Parcel Finder is being developed as a separate companion for Florida pro
 
 Zoho CRM is the first integration target. The setup direction supports reviewing a company’s existing modules and fields and mapping PowerPortals concepts to the customer’s CRM schema. The CRM lead handoff remains under private validation.
 
-The private beta widget suite includes:
+The private commercial widget suite includes:
 
 - **Zoho Setup Assistant:** discovers module and field metadata, suggests type-compatible mappings, and exports a review draft. It does not create modules, change CRM settings, or activate mappings.
 - **Florida Property Verification:** displays a record’s location and queries selected public Florida parcel sources. It does not write parcel data back to CRM, and source coverage is partial.
 
-These Zoho widget ZIPs are private beta artifacts, not public downloads. Mapping import, optional schema provisioning, permissions, and supported-edition compatibility require further validation.
+These commercial Zoho components are supplied privately; there are no free beta packages. Mapping import, optional schema provisioning, permissions, and supported-edition compatibility require further validation.
 
 ### Optional customer portal
 
@@ -275,9 +275,11 @@ PowerPortals targets a live WordPress website on the customer’s managed host, 
 
 [Read the live-server deployment and WordPress ↔ Zoho setup guide](DEPLOYMENT.md).
 
-PowerPortals remains under development and is not a generally available production release. Its current development build blocks production initialization. These steps describe the intended deployment of an approved commercial release; they do not bypass its release gates. The separate widget library’s public evaluation packages have their own documented limitations.
+PowerPortals remains under development and is not a generally available production release. Its current development build blocks production initialization. These steps describe the intended deployment of an approved commercial release; they do not bypass its release gates. The companion widget library is also commercial and supplied privately, subject to its documented limitations.
 
 ## Availability and security
+
+**Commercial showcase only.** No free beta packages, portal/plugin installers, Zoho widget packages or software source are distributed by public product pages. Licensing, implementation and software delivery are arranged privately.
 
 PowerPortals is not currently offered as a public plugin download. The lead-intake form, Zoho lead sync, Florida parcel lookup, and optional customer portal remain under private development and validation. No general-availability date is announced.
 

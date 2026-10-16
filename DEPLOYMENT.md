@@ -33,7 +33,7 @@ Use the hosting provider's staging environment and a Zoho sandbox for account-sp
 
 ## Install Zoho widgets directly in Zoho CRM
 
-1. Download the component ZIP and its Schema Setup ZIP from the approved release. Keep their checksums and version record.
+1. Obtain the licensed component and any Schema Setup companion privately under the agreed commercial scope. Keep the supplied checksums and version record. Public showcases do not distribute software.
 2. Sign in to the intended Zoho CRM organization as an authorized administrator. Open **Setup → Developer Hub → Widgets** and create a widget.
 3. Select the component's documented type, choose **Zoho** for hosting, and upload its ZIP. Enter the exact index page listed in the component's INSTALL.md, then save.
 4. Attach it to the intended record button, related list, dashboard, Web Tab or Settings component. Upload alone does not place the widget in a user's workspace. Record-bound widgets need the correct module and record context.
